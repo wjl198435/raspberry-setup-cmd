@@ -1,9 +1,0 @@
-sudo apt-get update    #更新软件列表
-sudo apt-get upgrade  #更新软件
-
-sudo apt-get install subversion  #Subversion是一个自由开源的版本控制系统
-
-sudo apt-get install libjpeg8-dev  #JPEG支持库
-sudo apt-get install imagemagick
-sudo apt-get install libv4l-dev   #4l是小写"L"
-sudo apt-get install cmake  #下载编译工具

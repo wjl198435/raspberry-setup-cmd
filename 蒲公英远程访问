@@ -1,9 +1,0 @@
-准备 安装 PgyVPN-1.0.0-arm.deb
-sudo dpkg -i PgyVPN-1.0.0-arm.deb
-
-1.sudo pgyvpn (用户名wjl198435wx、密码wjl19840305)
-2.启动PC客户端(蒲公英)
-
-
-3.卸载 sudo dpkg -r PgyVPN
-
