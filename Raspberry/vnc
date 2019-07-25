@@ -2,3 +2,7 @@ $ sudo apt-get install tightvncserver
 $ tightvncserver
 
 $ vncserver :1 -geomtery 1024x728-depth 24
+
+
+详细说明:
+https://blog.csdn.net/lu_embedded/article/details/50621203
