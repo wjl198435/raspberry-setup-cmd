@@ -1,0 +1,6 @@
+1.sudo apt-get install python3-pip
+2.sudo apt-get install python3-dev
+3.sudo apt-get install python-virtualenv
+4.virtualenv  --system-site-packages -p python3 tensorflow
+5.source ~/tensorflow/bin/activate
+6.pip3 install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.11.0/tensorflow-1.11.0-cp35-none-linux_armv7l.whl

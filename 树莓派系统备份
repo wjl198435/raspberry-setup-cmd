@@ -1,0 +1,10 @@
+Mac环境
+
+1.查看SD卡文件
+diskutil list
+
+2.执行系统备份:
+ sudo dd if=/dev/disk2 bs=1m | gzip  > 256M_backupImage.gz
+  说明:/dev/disk2 SD挂载路径,  256M_backupImage.gz 备份到mac镜像文件/path 
+3.执行系统恢复
+  sudo dd if=/dev/diskx bs=1m | gzip > /path/to/backupImage.gz

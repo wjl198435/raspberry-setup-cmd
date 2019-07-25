@@ -1,0 +1,60 @@
+Gest: wifi:ip  192.168.234.80
+
+1.停止服务:
+sudo systemctl stop home-assistant@homeassistant.service
+sudo systemctl stop appdaemon@homeassistant.service
+
+sudo systemctl daemon-reload
+
+2.启动服务：
+sudo systemctl start home-assistant@homeassistant.service
+
+sudo systemctl restart home-assistant@homeassistant.service
+
+   sudo systemctl status home-assistant@homeassistant.service
+   sudo journalctl -f -u home-assistant@homeassistant.service
+   sudo journalctl -f -u home-assistant@homeassistant.service | grep -i 'error'
+   sudo systemctl restart home-assistant@homeassistant.service && sudo journalctl -f -u home-assistant@homeassistant.service
+   
+3.校验配置脚本
+hass --script check_config
+
+4.安装Samba
+sudo hassbian-config install samba
+   Mac： 1.cmd+k 2.smb://172.13.140.252 3.客人 
+
+
+5.升级安装包 pip install --upgrade SomePackage
+
+
+6.允许在home assistant
+$ sudo -u homeassistant -H -s
+$ source /srv/homeassistant/bin/activate
+$ pip install docker-compose
+
+
+
+Mqtt: MQTT Server Issue - Connection Refused not authorized
+#Turn off Mosquitto persistence and enable authentication:
+sudo nano /etc/mosquitto/mosquitto.conf
+#Set persistence false and add the lines:
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+#Create a password file for MQTT user pi with:
+sudo mosquitto_passwd -c /etc/mosquitto/passwd pi
+Enter password raspberry (default)
+T#est MQTT
+#Open another shell window to subscribe to a test topic:
+mosquitto_sub -v -u 'pi' -P 'raspberry' -t 'test/topic'
+#Publish to the test topic :
+mosquitto_pub -u 'pi' -P 'raspberry' -t 'test/topic' -m 'helloWorld'
+{
+mosquitto_sub -v -u 'pi' -P 'raspberry' -h 127.0.0.1 -p 1883 -t "homeassistant/switch/irrigation/config" 
+ 
+mosquitto_pub   -u 'pi'  -P 'raspberry'   -h 127.0.0.1 -p 1883 -t "homeassistant/switch/irrigation/config"   -m '{"name": "garden", "command_topic": "homeassistant/switch/irrigation/set"}'
+}
+
+
+
+7.打开树莓派config
+sudo raspi-config
