@@ -4,7 +4,11 @@ Mac环境
 diskutil list
 
 2.执行系统备份:
- sudo dd if=/dev/disk2 bs=1m | gzip  > 256M_backupImage.gz
-  说明:/dev/disk2 SD挂载路径,  256M_backupImage.gz 备份到mac镜像文件/path 
-3.执行系统恢复
+ sudo dd if=/dev/disk2 bs=1m | gzip  > buster_tensorflow_opencv.gz
+  说明:/dev/disk2 SD挂载路径,  buster_tensorflow_opencv.gz 备份到mac镜像文件/path 
+3.(方法一:尝试失败了)执行系统恢复
   sudo dd if=/dev/diskx bs=1m | gzip > /path/to/backupImage.gz
+
+4. Mac 启动Mac SDCard Formatter 格式好SD卡
+   启动balenaEtcher (文件夹路径 /Users/wangjinliang/work/buster_tensorflow_opencv.gz)
+  
