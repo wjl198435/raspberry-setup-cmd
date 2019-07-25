@@ -1,3 +1,4 @@
-#tightvncserver
+$ sudo apt-get install tightvncserver
+$ tightvncserver
 
-#vncserver :1 -geomtery 1024x728-depth 24
+$ vncserver :1 -geomtery 1024x728-depth 24
