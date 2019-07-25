@@ -1,0 +1,8 @@
+# 1.sudo vi /etc/dphyswapfile
+  修改:
+   CONF_SWAPSIZE = 2048
+# 2.重启服务
+    $sudo /etc/init.d/dphys-swapfile stop
+    $sudo /etc/init.d/dphys-swapfile start
+#3.查看
+  $free -h
