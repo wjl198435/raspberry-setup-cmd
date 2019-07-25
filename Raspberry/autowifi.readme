@@ -1,0 +1,4 @@
+sudo cp -f /home/pi/autowifi.sh /etc/init.d/
+sudo chmod +x /etc/init.d/autowifi.sh
+sudo chown root:root /etc/init.d/autowifi.sh 
+sudo update-rc.d autowifi.sh defaults

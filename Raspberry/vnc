@@ -1,0 +1,3 @@
+#tightvncserver
+
+#vncserver :1 -geomtery 1024x728-depth 24
